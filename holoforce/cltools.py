@@ -3,7 +3,7 @@
 import attr
 import pyopencl as cl
 import pyopencl.tools
-from clprofiler import create_profiler
+from .clprofiler import create_profiler
 
 
 @attr.s

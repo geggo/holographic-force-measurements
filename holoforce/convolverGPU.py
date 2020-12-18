@@ -1,6 +1,6 @@
 import attr
 import numpy as np
-from cltools import CLConsumer
+from .cltools import CLConsumer
 
 import pyopencl.array as cla
 import gpyfft

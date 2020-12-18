@@ -6,8 +6,8 @@ from __future__ import division, print_function
 import numpy as np
 import mkl_fft
 
-from next_regular import next_regular_mul8
-from field import Field
+from .next_regular import next_regular_mul8
+from .field import Field
 
 import attr
 import functools

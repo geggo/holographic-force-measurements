@@ -4,9 +4,9 @@ import attr
 import pyopencl as cl
 import numpy as np
 
-import ABCD
-from propagator import Field, ParaxialOptics, FresnelPropagatorGPU
-from cltools import CLConsumer
+from . import ABCD
+from .propagator import Field, ParaxialOptics, FresnelPropagatorGPU
+from .cltools import CLConsumer
 
 
 @attr.s

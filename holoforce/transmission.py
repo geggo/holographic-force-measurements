@@ -2,7 +2,7 @@ import attr
 import numpy as np
 import pyopencl.array as cla
 
-from cltools import CLConsumer
+from .cltools import CLConsumer
 
 
 def fresnel_intensity(cos_alpha, cos_beta, n1, n2):

@@ -1,13 +1,13 @@
 import attr
 import numpy as np
-from cltools import CLConsumer
-from multiareapropagator import MultiAreaField, MultiAreaFocalToFarfieldPropagatorGPU
-from fringer import FringerGPU
-from propagator import FresnelPropagatorGPU, Field, ParaxialOptics
+from .cltools import CLConsumer
+from .multiareapropagator import MultiAreaField, MultiAreaFocalToFarfieldPropagatorGPU
+from .fringer import FringerGPU
+from .propagator import FresnelPropagatorGPU, Field, ParaxialOptics
 
-from transmission import TransmissionFresnelGPU
-from convolverGPU import ConvolverGPU
-import ABCD
+from .transmission import TransmissionFresnelGPU
+from .convolverGPU import ConvolverGPU
+from . import ABCD
 import warnings
 
 import pyopencl.array as cla
