@@ -1,10 +1,7 @@
-.. holographic force measurements documentation master file, created by
-   sphinx-quickstart on Thu Jan  3 20:39:00 2019.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. holographic force measurements documentation master file
 
 Welcome to holographic force measurements documentation!
-============================================
+========================================================
 
 .. toctree::
    :maxdepth: 3
@@ -14,13 +11,13 @@ Welcome to holographic force measurements documentation!
    multiareapropagator
    test_fieldretriever
 
-.. automodule:: field
+.. automodule:: holoforce.field
    :members:
    :undoc-members:
    :show-inheritance:
    :member-order: bysource
 
-.. automodule:: propagator
+.. automodule:: holoforce.propagator
    :members:
    :undoc-members:
    :show-inheritance:

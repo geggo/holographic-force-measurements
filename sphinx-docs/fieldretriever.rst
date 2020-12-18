@@ -1,7 +1,7 @@
 fieldretriever module
 =====================
 
-.. automodule:: fieldretriever
+.. automodule:: holoforce.fieldretriever
     :members:
     :undoc-members:
     :show-inheritance:
