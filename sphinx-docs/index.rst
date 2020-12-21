@@ -9,7 +9,6 @@ Welcome to holographic force measurements documentation!
 
    fieldretriever
    multiareapropagator
-   test_fieldretriever
 
 .. automodule:: holoforce.field
    :members:
