@@ -5,6 +5,7 @@ from __future__ import division, print_function
 
 import numpy as np
 import mkl_fft
+import os.path
 
 from .next_regular import next_regular_mul8
 from .field import Field
@@ -235,8 +236,9 @@ class FresnelPropagatorGPU(FresnelPropagator):
         self.cl_ifftplan = gpyfft.fft.FFT(self.context, self.queue, self.cl_workF, self.cl_work)
 
     def _init_cl_kernels(self):
-
-        source = open('propagator.cl', 'r').read()
+        filename = os.path.join(os.path.split(__file__)[0],
+                                'propagator.cl')
+        source = open(filename, 'r').read()
         program = cl.Program(self.context, source)
         program.build()
         build_info = program.get_build_info(self.context.devices[0],
@@ -1042,8 +1044,9 @@ class RayleighSommerfeldPropagatorGPU(RayleighSommerfeldPropagator):
         self.cl_ifftplan = gpyfft.fft.FFT(self.context, self.queue, self.cl_workF, self.cl_work)
 
     def _init_cl_kernels(self):
-
-        source = open('propagator_RS.cl', 'r').read()
+        filename = os.path.join(os.path.split(__file__)[0],
+                                'propagator_RS.cl')
+        source = open(filename, 'r').read()
         program = cl.Program(self.context, source)
         program.build()
         build_info = program.get_build_info(self.context.devices[0],

@@ -4,6 +4,7 @@ from __future__ import print_function
 import numpy as np
 import pyopencl as cl
 import pyopencl.array as cla
+import os.path
 
 
 class CLProfiler:
@@ -92,7 +93,9 @@ class FringerGPU(object):
 
         
     def _init_cl_kernels(self):
-        source = open('fringer.cl', 'r').read()
+        filename = os.path.join(os.path.split(__file__)[0],
+                                'fringer.cl')
+        source = open(filename, 'r').read()
         program = cl.Program(self.context, source)
         defines = ['-DPHI_MIN=%ff'%self.phases.min(),
                    '-DPHI_MAX=%ff'%self.phases.max()]
@@ -109,7 +112,9 @@ class FringerGPU(object):
         self.cl_kernel_fringe2d_grad = program.fringe2dV2_grad
         
     def prepare_param_tables(self):
-        d = np.load(self.tabledatafile)
+        filename = os.path.join(os.path.split(__file__)[0],
+                                self.tabledatafile)
+        d = np.load(filename)
         self.phases = d['coeffs_phase']
         Tx = self.preprocess_params(d['coeffs_x'])
         Ty = self.preprocess_params(d['coeffs_y'])
