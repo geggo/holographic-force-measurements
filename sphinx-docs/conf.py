@@ -43,6 +43,7 @@ release = '0.1.0'
 # ones.
 extensions = [
     'nbsphinx',
+    'nbsphinx_link',
     'sphinx.ext.autodoc',
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
