@@ -80,6 +80,7 @@ exclude_patterns = []
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None
 
+nbsphinx_allow_errors = True
 
 # -- Options for HTML output -------------------------------------------------
 
