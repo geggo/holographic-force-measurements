@@ -26,8 +26,8 @@ class BasicOptics(object):
 
 @attr.s
 class ParaxialOptics(BasicOptics):
+    """Describes parameters of propagation through optics in paraxial approximation"""
     ABCD = attr.ib(default=[[1, 0], [0, 1]], converter=np.asmatrix)
-
 
 
 @attr.s
@@ -46,7 +46,12 @@ class HighNAOptics(BasicOptics):
 
 # TODO: make attr.s class
 class FresnelPropagator(object):
-    def __init__(self, field1, field2, paraxial_optics=None):
+    """
+    Propagator based on Collins integral, paraxial approximation.
+    """
+    
+    def __init__(self, field1 : Field, field2 : Field,
+                 paraxial_optics : ParaxialOptics = None):
         self.optics = paraxial_optics
 
         assert field1.dtype == field2.dtype, 'fields need to have same precision'

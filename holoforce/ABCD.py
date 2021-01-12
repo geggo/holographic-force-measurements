@@ -21,7 +21,7 @@ def prop(d):
 
 
 def lens(f):
-    """lens"""
+    """lens with focal length f"""
     return np.array([[1., 0.], [-1./f, 1.]])
 
 
@@ -31,4 +31,5 @@ def to_inf(d1=0.3, d2=0.3, f=0.3):
 
 
 def lens_at_f(f=300e-3):
+    """Fourier lens, with """
     return to_inf(f=f, d1=f, d2=f)

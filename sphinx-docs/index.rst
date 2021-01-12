@@ -8,23 +8,11 @@ Welcome to holographic force measurements documentation!
    :caption: Contents:
    
    usage
+   field
+   propagator
    fieldretriever
    multiareapropagator
    
-
-
-.. automodule:: holoforce.field
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :member-order: bysource
-
-.. automodule:: holoforce.propagator
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :member-order: bysource	     
-
 
 Indices and tables
 ==================
