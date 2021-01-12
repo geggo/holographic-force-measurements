@@ -1,8 +1,7 @@
-# Direct measurement of individual optical forces: data analysis software
+# holoforce: data analysis software for direct measurement of individual optical forces
 
-This repository contains the source code for holographic force measurements.
-
-**NOTE** This is work in progress
+This repository contains the source code of programs for holographic force measurements, as described in:
+> [Franziska Strasser, Simon Moser, Monika Ritsch-Marte, and Gregor Thalhammer. Direct measurement of individual optical forces in ensembles of trapped particles. Optica 8(1), 79-87 (2021)](https://www.osapublishing.org/optica/fulltext.cfm?uri=optica-8-1-79&id=446489O)
 
 ## Installation
 
